@@ -1,0 +1,116 @@
+$skeleton-color: #f2f2f2;
+
+@mixin skeleton-runner($applicable_tag) {
+  #{$applicable_tag}::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background: linear-gradient(to right, $skeleton-color, #ddd, $skeleton-color);
+    animation: loading 2s infinite linear;
+  }
+}
+
+@mixin skeleton-style($applicable_tag) {
+  #{$applicable_tag} {
+    position: relative;
+    background: $skeleton-color;
+    overflow: hidden;
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .avatar {
+    display: flex;
+    justify-content: center;
+
+    .image-wrapper {
+      height: 80px;
+      width: 80px;
+      object-fit: cover;
+    }
+
+    .image-wrapper.skeleton {
+      border-radius: 50%;
+    }
+
+    .image {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    @include skeleton-style('.image-wrapper.skeleton');
+    @include skeleton-runner('.image.skeleton');
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 20px;
+
+    p {
+      margin: 0;
+    }
+
+    .name {
+      font-weight: bold;
+    }
+
+    .name.skeleton {
+      width: 70%;
+      height: 18px;
+    }
+
+    .email {
+      margin-top: 5px;
+      border-bottom: 1px solid transparent;
+      color: #212539;
+      text-decoration: none;
+      font-style: italic;
+
+      &:hover {
+        border-bottom: 1px solid #21253925;
+      }
+    }
+
+    .email.skeleton {
+      width: 90%;
+      height: 18px;
+      margin-top: 15px;
+
+      &:hover {
+        border: none;
+      }
+    }
+
+    @include skeleton-style('.name.skeleton');
+    @include skeleton-style('.email.skeleton');
+    @include skeleton-runner('.name.skeleton');
+    @include skeleton-runner('.email.skeleton');
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-100px);
+  }
+  50%,
+  100% {
+    transform: translateX(460px);
+  }
+}
