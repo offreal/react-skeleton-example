@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-skeleton-example/static/css/main.97c874f3.chunk.css",
+    "main.js": "/react-skeleton-example/static/js/main.ff91e536.chunk.js",
+    "main.js.map": "/react-skeleton-example/static/js/main.ff91e536.chunk.js.map",
+    "runtime-main.js": "/react-skeleton-example/static/js/runtime-main.fe1043ef.js",
+    "runtime-main.js.map": "/react-skeleton-example/static/js/runtime-main.fe1043ef.js.map",
+    "static/js/2.9447f160.chunk.js": "/react-skeleton-example/static/js/2.9447f160.chunk.js",
+    "static/js/2.9447f160.chunk.js.map": "/react-skeleton-example/static/js/2.9447f160.chunk.js.map",
+    "index.html": "/react-skeleton-example/index.html",
+    "static/css/main.97c874f3.chunk.css.map": "/react-skeleton-example/static/css/main.97c874f3.chunk.css.map",
+    "static/js/2.9447f160.chunk.js.LICENSE.txt": "/react-skeleton-example/static/js/2.9447f160.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fe1043ef.js",
+    "static/js/2.9447f160.chunk.js",
+    "static/css/main.97c874f3.chunk.css",
+    "static/js/main.ff91e536.chunk.js"
+  ]
+}
